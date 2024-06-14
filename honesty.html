@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="MD ARAFAT KOYES" />
+    <meta name="description" content="Honesty statement and credits" />
+    <title>Honesty Statement</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css" />
+    <style>
+      body {
+        background-color: #2c3e50; /* Light Navy Blue */
+        color: #fff;
+      }
+      header,
+      footer {
+        background: #1a252f;
+        color: #fff;
+        padding: 1rem 0;
+      }
+      header h1,
+      footer p {
+        margin: 0;
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+      }
+      nav ul li {
+        display: inline;
+        margin: 0 10px;
+      }
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+      }
+      article {
+        padding: 2rem;
+      }
+      .btn-custom {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      a {
+        color: #1abc9c;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="text-center">
+      <h1>Honesty Statement</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="honesty.html">Honesty</a></li>
+        </ul>
+      </nav>
+    </header>
+    <article class="container">
+      <h2>Academic Honesty</h2>
+      <p>
+        I declare that my assignment is wholly my own work in accordance with Seneca Academic
+        Policy. No part of this assignment has been copied manually or electronically from any other
+        source (including web sites) except for the information supplied by the WEB222 instructors
+        and/or made available in this assignment for my use.
+      </p>
+      <p>I also declare that no part of this assignment has been distributed to other students.</p>
+      <h2>Credits</h2>
+      <ul>
+        <li>
+          <a href="https://en.wikipedia.org/wiki/Spider-Man_(2002_film)"
+            >Wikipedia - Spider-Man (2002 film)</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.pexels.com/photo/people-wearing-spider-man-adult-costume-walking-on-train-station-2859016/"
+            >Pexels - Spider-Man Images</a
+          >
+        </li>
+        <li>
+          <a href="https://youtu.be/t06RUxPbp_c?si=-D-kT4spIWli5dH7"
+            >YouTube - Spider-Man Trailer</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://soundcloud.com/samuelkimmusic/spider-man-no-way-home-tobey-andrews-theme-epic-emotional-fan-made?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+            >SoundCloud - Spider-Man Theme</a
+          >
+        </li>
+      </ul>
+      <button class="btn-custom" id="showStatementBtn">Show Honesty Statement</button>
+    </article>
+    <footer class="text-center">
+      <p>Used all resources from assignment MS Word file</p>
+    </footer>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- SweetAlert2 for interactive alerts -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+      document.getElementById('showStatementBtn').addEventListener('click', function () {
+        Swal.fire({
+          title: 'Honesty Statement',
+          text: 'I declare that my assignment is wholly my own work in accordance with Seneca Academic Policy. No part of this assignment has been copied manually or electronically from any other source (including web sites) except for the information supplied by the WEB222 instructors and/or made available in this assignment for my use. I also declare that no part of this assignment has been distributed to other students.',
+          icon: 'info',
+          confirmButtonText: 'Close'
+        });
+      });
+    </script>
+  </body>
+</html>
