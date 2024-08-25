@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=500, initial-scale=1" />
+    <meta name="author" content="MD ARAFAT KOYES" />
+    <title>Request New Artist - WEB222 Music App</title>
+    <link rel="stylesheet" href="./css/water.css" />
+    <style>
+      .form-container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #f7f7f7;
+      }
+
+      .form-container h2 {
+        text-align: center;
+      }
+
+      .form-container label {
+        display: block;
+        margin: 10px 0 5px;
+      }
+
+      .form-container input,
+      .form-container select,
+      .form-container textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .form-container input[type="submit"] {
+        background-color: #0076d1;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      .form-container .add-url {
+        display: block;
+        margin: 10px 0;
+        padding: 5px 10px;
+        background-color: #0076d1;
+        color: white;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Request a New Artist</h2>
+      <form action="https://httpbin.org/post" method="post">
+        <label for="artist-name">Artist's Name:</label>
+        <input type="text" id="artist-name" name="artist-name" required />
+
+        <label for="music-genre">Music Genre:</label>
+        <input type="text" id="music-genre" name="music-genre" list="genres" required />
+        <datalist id="genres">
+          <option value="Pop"></option>
+          <option value="Rock"></option>
+          <option value="Jazz"></option>
+          <option value="Hip Hop"></option>
+          <option value="Classical"></option>
+          <option value="Country"></option>
+          <option value="Electronic"></option>
+          <option value="Reggae"></option>
+          <option value="Blues"></option>
+          <option value="Metal"></option>
+        </datalist>
+
+        <label for="social-media-urls">Social Media URLs:</label>
+        <input
+          type="url"
+          id="social-media-urls"
+          name="social-media-urls[]"
+          placeholder="https://example.com"
+          required
+        />
+
+        <label for="song-video-urls">Song/Video URLs:</label>
+        <div id="song-video-container">
+          <input type="url" name="song-video-urls[]" placeholder="https://example.com" required />
+        </div>
+        <div class="add-url" onclick="addSongVideoUrl()">Add another URL</div>
+
+        <label for="explicit-lyrics">
+          <input type="checkbox" id="explicit-lyrics" name="explicit-lyrics" />
+          Explicit Lyrics
+        </label>
+
+        <label for="description">Why should this artist be added?</label>
+        <textarea id="description" name="description" rows="5" required></textarea>
+
+        <input type="submit" value="Submit Request" />
+      </form>
+    </div>
+
+    <script>
+      function addSongVideoUrl() {
+        const container = document.getElementById("song-video-container");
+        const input = document.createElement("input");
+        input.type = "url";
+        input.name = "song-video-urls[]";
+        input.placeholder = "https://example.com";
+        container.appendChild(input);
+      }
+    </script>
+  </body>
+</html>

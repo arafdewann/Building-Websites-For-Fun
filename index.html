@@ -1,266 +1,128 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-CA">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Your Name" />
-    <meta name="description" content="Your Spider-Man Movie Website" />
-    <title>Spider-Man Movie Website</title>
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <!-- Google Fonts -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-    />
-    <!-- Custom CSS -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=500, initial-scale=1" />
+    <meta name="author" content="MD ARAFAT KOYES" />
+    <title>WEB222 Music App</title>
+    <link rel="stylesheet" href="./css/water.css" />
     <style>
-      body {
-        background-color: #f8f9fa;
-        color: #333;
-        font-family: 'Roboto', sans-serif;
+      .nav {
+        top: 250px;
+        padding-top: 20px;
       }
-      .navbar {
-        margin-bottom: 2rem;
-        background: linear-gradient(to right, #ff0000, #0000ff); /* Red to Blue Gradient */
+
+      .selected-artist {
+        padding-top: 10px;
       }
-      header {
-        background: linear-gradient(to right, #ff0000, #0000ff); /* Red to Blue Gradient */
-        color: #fff;
-        padding: 4rem 0;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+      .web-links {
+        margin: 0px;
+        padding: 10px;
+        background-color: rgb(75, 75, 75);
+        border-radius: 5px;
       }
-      header h1 {
-        margin: 0;
-        font-size: 3rem;
+
+      .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 20px;
       }
-      main {
-        padding: 2rem;
+
+      .card {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 15px;
+        width: calc(33% - 20px);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       }
+
+      .card img {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+
+      .card h2 {
+        margin: 10px 0;
+      }
+
+      .card time,
+      .card span {
+        display: block;
+        margin: 5px 0;
+      }
+
       footer {
-        background: #343a40;
-        color: #fff;
+        margin-top: 50px;
+        padding: 20px;
+        background-color: #f7f7f7;
         text-align: center;
-        padding: 1rem 0;
-        margin-top: 2rem;
       }
-      .content-section {
-        margin-bottom: 2rem;
+
+      .footer-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
-      .content-section h2 {
-        margin-bottom: 1rem;
+
+      .footer-form input[type="email"] {
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
       }
-      .figure-img {
-        width: 100%;
-        height: 300px; /* Consistent height */
-        object-fit: cover; /* Ensure the image covers the area without distortion */
+
+      .footer-form input[type="submit"] {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #0076d1;
+        color: white;
+        cursor: pointer;
       }
     </style>
   </head>
   <body>
-    <header class="text-center">
-      <h1>Spider-Man Movie 2002</h1>
-    </header>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand" href="#">Spider-Man</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="honesty.html">Academic Honesty</a>
-          </li>
-        </ul>
-      </div>
+    <nav id="menu" class="nav">
+      <!-- Dynamically create my menu category buttons here -->
+      <a href="request-artist.html">Request a New Artist</a>
     </nav>
-    <main class="container">
-      <section class="content-section">
-        <h2>About Spider-Man</h2>
-        <p>
-          It is based on the Marvel Comics character Spider-Man, directed by Sam Raimi, starring
-          Tobey Maguire in the leading role, along with Willem Dafoe, Kirsten Dunst, James Franco,
-          and Cliff Robertson. In "Spider-Man" (2002), we dare glimpse how Peter Parker learned to
-          navigate life as a teenager, living in Queens, NY, with his Aunt May and Uncle Ben. Peter
-          is an intelligent and anxious teenager trying to find his way between the peaks and
-          troughs of human performance. Things take a turn for his life during a school expedition
-          to a laboratory testing facility when a genetically altered arachnid bits him. That bite
-          gave Peter super-human capabilities with strength above normal, advanced reflexes,
-          stick-to-walls, and a precognitive "spider-sense" that can sense impending danger within
-          milliseconds of its conception. Peter is at first ecstatic, and he goes through the phase
-          that most of us would if, all of a sudden, we were a real deal superhero: trying out his
-          incredible new abilities; what this could mean? Being newly able to perform feats, Peter
-          is giddy and muses on the possibilities they hold. Though this isn't the natural choice in
-          Peter's life that changes it, that would be his decision not to stop a robber, from which
-          said robber would then go on to kill his Uncle Ben. These are only said in The Amazing
-          Spider-Man, though, as Uncle Ben teaches Peter these three fateful words just before he
-          dies: "With great power comes great responsibility." This has to be my quote of the story.
-          As it should, this tragedy becomes Peter's most crucial moment, from which he will take
-          the first steps in his acceptance as Spider-Man. He builds web-shooters and a red and blue
-          spider-web-like suit to help him get around in the city, as well as to fight crimes.
-          Peter, being the Spider-Man, swings through New York City, stopping villains and saving
-          the day. However, his double life starts taking its toll on his home and office fronts. He
-          fights to regain his best friend, Harry Osborn, and girlfriend, Mary Jane, all along
-          keeping a secret that he was a superhero. The story unfolds with Harry's father, Norman
-          Osborn, the billionaire industrialist, turning into the Green Goblin after
-          self-administration of an experimental genetic serum that not only gave him superpowers
-          but led him to insanity also. The Green Goblin is one of the most frightening-looking
-          villains. The Green Goblin emerges as the significant nemesis of Spider-Man, driven by
-          jealousy and lust for power. The battle between Spider-Man and Green Goblin is another
-          example of a conflict that becomes famous and tests Peter's courage and heroism. It is not
-          only a battle of flesh but also an emotional battle because Norman shares a relationship
-          with Harry. In the end, Spider-Man wins, but at a personal cost, bringing out sacrifice
-          and responsibility. The movie presents Spider-Man in very human nature. Although most
-          superheroes are portrayed as characters who can resist everything, Spider-Man's power lies
-          within his natural vulnerability. Peter Parker's intelligence, heart, and strong sense of
-          responsibility give him character. His internal dilemmas make his heroism quite hauntingly
-          real to people. Among his characteristics, Peter's intellect is defined through his
-          scientific knowledge, which is used to construct web shooters and devise tactics against
-          foes. His dual life as Peter Parker and Spider-Man adds layers to his character as he
-          juggles everyday problems with the responsibilities of being a superhero. It is in this
-          world of chaos that he finds an anchor in Aunt May, who provides him with emotional
-          support. The romantic subplot with Mary Jane Watson gives Peter another dimension,
-          arousing his wish to be expected. He is the anti-hero of Spider-Man, and both characters
-          get transformations that allow them special abilities, yet they both take different ways.
-          While Peter uses his powers for the good, Norman succumbs to the dark side of him. It is
-          this difference in character that highlights the moral choices that define heroes and
-          villains. "Spider-Man" is not merely an action-filled superhero drama; it dwells on
-          matters of maturity, responsibility, and the condition of a human being. The story of
-          Peter Parker evolving from an ordinary teenager into some heroic figure has been sketched
-          out for the ages—a timeless struggle between good and evil, which brings Spider-Man onto
-          the list of people's most favorite and loving characters in cinematic history. The act,
-          moral dilemmas, and human emotions in the movie are well-proportioned to project
-          Spider-Man as a superhero, one who holds a stand for resilience and duty. The
-          relationships Peter must navigate throughout the film further complicate his character and
-          its emotional stakes. His friendship with Harry Osborn is strained by the conflict between
-          Spider-Man and the Green Goblin, adding a personal dimension to the larger-than-life
-          battles. Harry's gradual spiral into resentment and anger toward Spider-Man, whom he
-          blames for his father's death, lays the foundation for the future showdowns and becomes a
-          fatalistic subplot. Meanwhile, Peter's love affair with Mary Jane Watson keeps on track,
-          acting as one of the signs of hope and the feeling of normalcy. The impulses that drive
-          him to keep Mary Jane out of harm's way from the perils of his double life only complicate
-          their coupling, which is tenuous at best and based upon unrevealed feelings and overt
-          desire. Mary Jane symbolizes the life Peter longs for himself, a life in which he can be
-          plain old Peter Parker without the burden of being Spider-Man. But he is keenly aware of
-          one thing. To enjoy all that life has to offer would mean putting the people he cherishes
-          and loves at significant risk. This internal conflict builds up the tension of the movie
-          from beginning to end, while Peter keeps taking on the consequences of it. Also, the film
-          is brilliant in representing New York as a character. The crowded streets, tall buildings,
-          and the vastly mixed crowd create a very dynamic backdrop for the adventures of
-          Spider-Man. The dynamic character of the city somehow emulates Peter's journey—a path that
-          is filled with struggles and victories, ups and downs. So there's no denying: Spider-Man
-          loves New York. He swings by, guarding its people and finding his strength in its
-          resiliency. This mutually profitable partnership shows Spider-Man's way as an urban hero
-          standing up for the commoner.
-        </p>
-      </section>
-      <section class="content-section">
-        <h2>Images</h2>
-        <div class="row">
-          <div class="col-md-4">
-            <figure>
-              <img
-                src="Files/spiderman.jpeg"
-                alt="Spider-Man Movie Poster"
-                class="figure-img img-fluid rounded"
-              />
-              <figcaption>Spider-Man Movie Poster</figcaption>
-            </figure>
-          </div>
-          <div class="col-md-4">
-            <figure>
-              <img
-                src="Files/spiderman2002.jpg"
-                alt="Spider-Man Cast"
-                class="figure-img img-fluid rounded"
-              />
-              <figcaption>Spider-Man Cast</figcaption>
-            </figure>
-          </div>
-          <div class="col-md-4">
-            <figure>
-              <img
-                src="Files/spiderman3.jpg"
-                alt="Spider-Man Comic"
-                class="figure-img img-fluid rounded"
-              />
-              <figcaption>Spider-Man Comic</figcaption>
-            </figure>
-          </div>
+    <header>
+      <h1>MUZIFY</h1>
+      <p>"Enjoy the Muzify"</p>
+    </header>
+
+    <nav id="menu" class="nav">
+      <!-- Dynamically create my menu category buttons here -->
+    </nav>
+
+    <hr class="line" />
+
+    <main>
+      <div class="artist">
+        <h2 id="selected-artist" class="selected-artist"></h2>
+        <div>
+          <p id="artists" class="web-links"></p>
         </div>
-      </section>
-      <section class="content-section">
-        <h2>SoundCloud</h2>
-        <iframe
-          width="100%"
-          height="300"
-          scrolling="no"
-          frameborder="no"
-          allow="autoplay"
-          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/284998148&color=%23ff0049&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-        ></iframe>
-        <div
-          style="
-            font-size: 10px;
-            color: #cccccc;
-            line-break: anywhere;
-            word-break: normal;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            font-family:
-              Interstate,
-              Lucida Grande,
-              Lucida Sans Unicode,
-              Lucida Sans,
-              Garuda,
-              Verdana,
-              Tahoma,
-              sans-serif;
-            font-weight: 100;
-          "
-        >
-          <a
-            href="https://soundcloud.com/starsmagic"
-            title="Abdulrahman Al-Othman"
-            target="_blank"
-            style="color: #cccccc; text-decoration: none"
-            >Abdulrahman Al-Othman</a
-          >
-          ·
-          <a
-            href="https://soundcloud.com/starsmagic/spider-man-2002-main-title-theme"
-            title="Spider-Man (2002) Main Title Theme"
-            target="_blank"
-            style="color: #cccccc; text-decoration: none"
-            >Spider-Man (2002) Main Title Theme</a
-          >
-        </div>
-      </section>
+      </div>
+
+      <div class="card-container" id="cards"></div>
     </main>
+
     <footer>
-      <p>Personal Project website Spider-Man Movie</p>
+      <h2>Sign up for our Newsletter</h2>
+      <form class="footer-form" action="https://httpbin.org/post" method="post">
+        <input type="email" name="email" placeholder="Enter your email" required />
+        <input type="submit" value="Subscribe" />
+      </form>
     </footer>
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript Data Files -->
+    <script src="./js/artists.js"></script>
+    <script src="./js/songs.js"></script>
+
+    <!-- Main App JavaScript File -->
+    <script src="./js/app.js"></script>
   </body>
 </html>
